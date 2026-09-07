@@ -4,3 +4,7 @@ node_modules/
 .env
 *.log
 public/
+.vercel
+.preview/
+content/drafts/
+dist/

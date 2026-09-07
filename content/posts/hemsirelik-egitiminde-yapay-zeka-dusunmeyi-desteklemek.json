@@ -1,0 +1,51 @@
+{
+  "title": "Hemşirelik eğitiminde yapay zekâ: Öğrencinin yerine düşünmek mi, düşünmesini desteklemek mi?",
+  "slug": "hemsirelik-egitiminde-yapay-zeka-dusunmeyi-desteklemek",
+  "status": "published",
+  "publishedAt": "2026-09-07",
+  "summary": "Düzgün yazılmış bir yanıt, öğrenmenin gerçekleştiğini tek başına göstermez.",
+  "tags": [
+    "Hemşirelik eğitimi",
+    "Yapay zekâ"
+  ],
+  "body": [
+    {
+      "type": "paragraph",
+      "text": "Bir hemşirelik öğrencisinin bakım planını saniyeler içinde hazırlayabilmesi etkileyici. Ancak eğitim açısından asıl soru, öğrencinin o plandaki kararları açıklayıp açıklayamadığıdır. Düzgün yazılmış bir yanıt, öğrenmenin gerçekleştiğini tek başına göstermez."
+    },
+    {
+      "type": "paragraph",
+      "text": "Araştırmalar umut veriyor, fakat dikkatli yorumlanmayı gerektiriyor. 2025’te yayımlanan yarı deneysel bir çalışmada, üretken yapay zekâyla desteklenen öğretim grubunun üst düzey düşünme toplam puanları karşılaştırma grubundan daha yüksek bulundu. Buna karşılık, eleştirel düşünme alt boyutunda gruplar arasında anlamlı fark saptanmadı. Bu sonuç, yapay zekâ destekli öğretimin bazı düşünme becerilerine katkı sağlayabileceğini düşündürüyor. Ancak bu çalışmada eleştirel düşünme açısından anlamlı bir fark bulunmadığı için, aynı katkının eleştirel düşünme için de gösterildiğini söyleyemeyiz (Song vd., 2025)."
+    },
+    {
+      "type": "paragraph",
+      "text": "2026’da yayımlanan, 14 çalışmayı içeren bir sistematik derleme de benzer bir temkine işaret ediyor: Bazı uygulama becerilerinde olumlu sonuçlar görülürken, üst düzey düşünme ve öğrenilenlerin kalıcılığına ilişkin bulgular karışık (Nasirun vd., 2026)."
+    },
+    {
+      "type": "paragraph",
+      "text": "Bu bulgulardan hareketle, derslerde şu yaklaşım denenebilir: Öğrenci önce vakayı kendi bilgisiyle değerlendirir; ardından yapay zekânın önerisiyle karşılaştırır. Son aşamada hangi öneriyi neden kabul ettiğini, hangisini hangi kaynağa dayanarak reddettiğini açıklar. Böylece değerlendirme, teslim edilen metnin yanında öğrencinin düşünme sürecini de görünür kılar."
+    },
+    {
+      "type": "paragraph",
+      "text": "Yapay zekâ destekli ödevlerde yalnızca “Ne yanıt aldın?” sorusuyla yetinmeyelim. “Neyi doğruladın, hangi eksikliği fark ettin ve kararını nasıl gerekçelendirdin?” sorularını da soralım."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hemşirelik eğitiminde hedefimiz, bir yanıtı hızla üreten öğrenciden öte, o yanıtın sorumluluğunu taşıyabilecek mesleki muhakemeyi geliştirmek olmalı. Yapay zekânın eğitimdeki değerini de bu hedefe ne kadar katkıda bulunduğuyla değerlendirebiliriz."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nasirun, H., Mulyono, S., Hapsari, A. W. D., Wiradinata, H. H., & Ratu, M. (2026). Generative AI and intelligent tutoring systems in nursing education: A systematic review of impacts on higher-order thinking skills and clinical competency.",
+      "publication": "Nurse Education in Practice, 93",
+      "locator": "Article 104847",
+      "url": "https://doi.org/10.1016/j.nepr.2026.104847"
+    },
+    {
+      "title": "Song, D., Zhang, P., Zhu, Y., Qi, S., Yang, Y., Gong, L., & Zhou, L. (2025). Effects of generative artificial intelligence on higher-order thinking skills and artificial intelligence literacy in nursing undergraduates: A quasi-experimental study.",
+      "publication": "Nurse Education in Practice, 88",
+      "locator": "Article 104549",
+      "url": "https://doi.org/10.1016/j.nepr.2025.104549"
+    }
+  ]
+}
