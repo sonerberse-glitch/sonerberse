@@ -1,12 +1,12 @@
 /* Optional editorial presentation. Removing data-theme="light" restores blog.css. */
 html[data-theme="light"] {
-  --blog-bg: #f8f6f1;
-  --blog-surface: #fffefd;
-  --blog-ink: #202d3a;
-  --blog-body: #46515b;
-  --blog-muted: #626a70;
-  --blog-gold: #263f55;
-  --blog-border: #d5d7d5;
+  --blog-bg: var(--bg, #faf9f4);
+  --blog-surface: var(--surface, #fffefa);
+  --blog-ink: var(--ink, #132d39);
+  --blog-body: var(--body, #384d53);
+  --blog-muted: var(--muted, #52666a);
+  --blog-gold: var(--gold, #075852);
+  --blog-border: var(--border, #ccd7d1);
 }
 
 html[data-theme="light"] body.blog-page {
@@ -24,7 +24,7 @@ html[data-theme="light"] .blog-home {
   border-bottom: 0;
 }
 html[data-theme="light"] :is(.blog-home, .blog-page) ::selection {
-  background: #dbe3e9;
+  background: #ccdfd7;
   color: var(--blog-ink);
 }
 html[data-theme="light"] :is(.blog-home, .blog-page) a:focus-visible {
@@ -39,7 +39,7 @@ html[data-theme="light"] :is(.blog-skip-link, .blog-page .skip-link) {
 html[data-theme="light"] :is(.blog-home h2, .blog-empty-title, .blog-empty h2, .blog-empty h3,
   .blog-card-title, .blog-page-heading h1, .blog-heading, .blog-article-title,
   .blog-prose h2, .blog-prose h3) {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: var(--display, Georgia, serif);
   font-weight: 400;
   color: var(--blog-ink);
   letter-spacing: -.025em;
@@ -61,7 +61,7 @@ html[data-theme="light"] :is(.blog-brand, .blog-site-brand) {
 }
 html[data-theme="light"] :is(.blog-brand > span:first-child, .blog-brand-mark) {
   background: transparent;
-  border: 1px solid #9ca8b1;
+  border: 1px solid var(--blog-gold);
   border-radius: 2px;
   color: var(--blog-gold);
   font: 400 16px Georgia, 'Times New Roman', serif;
@@ -167,7 +167,7 @@ html[data-theme="light"] :is(.blog-prose, .blog-references, .blog-related) a:hov
 }
 html[data-theme="light"] .blog-prose blockquote {
   color: var(--blog-ink);
-  border-color: #9ca8b1;
+  border-color: var(--copper);
   background: transparent;
   padding-left: 24px;
 }
@@ -202,4 +202,32 @@ html[data-theme="light"] .blog-site-footer a { padding-block: 5px; }
   html[data-theme="light"] .blog-prose h2 { margin-top: 38px; }
   html[data-theme="light"] .blog-prose h3 { font-size: 23px; }
   html[data-theme="light"] .blog-prose blockquote { padding-left: 18px; }
+}
+
+html[data-theme="light"] .blog-site-header { background: var(--blog-surface); }
+html[data-theme="light"] .blog-header-inner { min-height: 68px; }
+html[data-theme="light"] :is(.blog-brand > span:first-child, .blog-brand-mark) {
+  color: #fffefa; background: var(--blog-gold); border: 0; font: 500 22px/1 var(--display, Georgia, serif);
+}
+html[data-theme="light"] .blog-home { background: #edf3ef; }
+html[data-theme="light"] .blog-container { max-width: 1260px; padding-inline: clamp(20px, 4.5vw, 68px); }
+html[data-theme="light"] .blog-page-heading { padding-bottom: 26px; border-bottom: 1px solid var(--blog-border); }
+html[data-theme="light"] .blog-page-heading h1 { font-size: clamp(43px, 5.5vw, 76px); }
+html[data-theme="light"] .blog-card {
+  border-top: 2px solid var(--copper); border-bottom: 1px solid var(--blog-border);
+  padding: 23px 0 25px;
+}
+html[data-theme="light"] .blog-grid:has(.blog-card:only-child) { grid-template-columns: minmax(0, 1fr); }
+html[data-theme="light"] .blog-card:only-child .blog-card-title { max-width: 33ch; font-size: clamp(25px, 3vw, 39px); line-height: 1.2; }
+html[data-theme="light"] .blog-card:only-child .blog-card-summary { max-width: 65ch; }
+html[data-theme="light"] .blog-article-header { border-bottom: 2px solid var(--copper); }
+html[data-theme="light"] .blog-article-title { font-size: clamp(37px, 4.6vw, 62px); line-height: 1.14; }
+html[data-theme="light"] .blog-article .blog-article-summary { font: 400 20px/1.65 var(--display, Georgia, serif); color: var(--blog-ink); }
+html[data-theme="light"] .blog-prose blockquote { background: var(--gold-s); border-left: 3px solid var(--copper); padding: 18px 24px; }
+html[data-theme="light"] .blog-page a:focus-visible { outline: 3px solid var(--copper); }
+html[data-theme="light"] .blog-page .blog-nav a[aria-current] { text-decoration-color: var(--copper); text-decoration-thickness: 2px; }
+html[data-theme="light"] .blog-prose :is(.blog-references,.blog-related) a { overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  html[data-theme="light"] .blog-header-inner { padding-block: 14px 8px; }
+  html[data-theme="light"] .blog-page-heading { margin-bottom: 26px; }
 }

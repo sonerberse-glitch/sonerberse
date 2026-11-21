@@ -29,12 +29,12 @@
 - Sağlık Bilimleri ve Klinik Araştırmalar Dergisi Editör Yardımcısı
 
 ## Seçilmiş Yayınlar
-- "Chatbot-Centered Integration of Simulation and Artificial Intelligence in Nursing Education" (Global Nursing Insights, 2025)
-- "Nursing Students' Early Attitudes Towards the Use of Artificial Intelligence and ChatGPT" (International Journal of Nursing Practice, 2025)
-- "Cultural Intelligence and Migration Intentions Among Nursing and Midwifery Students" (Journal of Advanced Nursing, 2025)
-- "Cultural Humility Among Nursing Students in a Multicultural Setting" (SAGE Open Nursing, 2024)
-- "Exploring the Challenges and Needs of Nursing Students in Relation to OSCE Exam Stress" (PLOS ONE, 2025)
-- "Yapay Zekâ Destekli Dil İşleme Teknolojisi Olan ChatGPT'nin Sağlık Hizmetlerinde Kullanımı" (Eurasian J. Health Technology Assessment, 2023)
+- [Chatbot-Centered Integration of Simulation and Artificial Intelligence in Nursing Education: A Narrative Review](https://doi.org/10.31125/globnursinsights.1762516) — Global Nursing Insights, 2025, 12(3), 290–300.
+- [Nursing Students’ Early Attitudes Towards the Use of Artificial Intelligence and ChatGPT: An Exploratory Study](https://doi.org/10.1111/ijn.70083) — International Journal of Nursing Practice, 2025, 31(6), e70083.
+- [Cultural Intelligence and Migration Intentions Among Nursing and Midwifery Students in Southeastern Region of Turkey: A Correlational Study](https://doi.org/10.1111/jan.16463) — Journal of Advanced Nursing, 2025, 81(4), 1914–1923.
+- [Cultural humility among nursing students in a multicultural setting](https://doi.org/10.3233/WOR-230268) — Work, 2024, 79(4), 1785–1793.
+- [Development of the nursing artificial intelligence readiness scale for nursing students: a validity and reliability study](https://doi.org/10.1186/s12912-026-05054-4) — BMC Nursing, 2026, 25, 961.
+- [Yapay Zekâ Destekli Dil İşleme Teknolojisi Olan ChatGPT’nin Sağlık Hizmetlerinde Kullanımı](https://doi.org/10.52148/ehta.1302000) — Eurasian Journal of Health Technology Assessment, 2023, 7(1), 57–65.
 
 ## Mesleki Üyelikler
 - European Transcultural Nursing Association
