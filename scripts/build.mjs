@@ -201,7 +201,7 @@ function shell({ title, description, canonical, content, preview, structuredData
   <a class="blog-skip-link" href="#main-content">İçeriğe geç</a>
   <header class="blog-site-header"><div class="blog-header-inner blog-container">
     <a class="blog-brand" href="/"><span class="blog-brand-monogram" aria-hidden="true">SB</span><span>Doç. Dr. Soner Berşe<small>Akademisyen · Araştırmacı</small></span></a>
-    <nav class="blog-nav" aria-label="Ana menü"><a href="/">Ana Sayfa</a><a href="/yazilar/"${canonical === '/yazilar/' ? ' aria-current="page"' : ' class="active"'}>Yazılarım</a><a href="/#contact">İletişim</a></nav>
+    <nav class="blog-nav" aria-label="Ana menü"><a href="/">Ana Sayfa</a><a href="/yazilar/"${canonical === '/yazilar/' ? ' aria-current="page"' : ' class="active"'}>Yazılarım</a><a class="program-tab" href="https://fikir.sonerberse.com/ogrenci">Fikirden Projeye</a><a href="/#contact">İletişim</a><a href="/#english" lang="en" aria-label="English academic profile">EN</a></nav>
   </div></header>
   <main class="blog-main blog-container" id="main-content">${content}</main>
   <footer class="blog-site-footer"><div class="blog-container"><p>Doç. Dr. Soner Berşe</p><a href="/">Ana sayfaya dön <span aria-hidden="true">↗</span></a></div></footer>
