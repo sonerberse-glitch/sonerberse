@@ -99,7 +99,7 @@
     "@type":"FAQPage",
     "mainEntity":[
       {"@type":"Question","name":"Hangi alanlarda araştırma ve proje geliştirme çalışmaları yürütüyorsunuz?","acceptedAnswer":{"@type":"Answer","text":"Sağlık eğitimi, hemşirelik, OSCE ve beceri değerlendirme, kültürel adaptasyon, yapay zekâ destekli eğitim-değerlendirme modelleri, NCLEX eğitimi ve eğitim teknolojileri temel araştırma ve geliştirme alanlarımdır."}},
-      {"@type":"Question","name":"İş birliği, proje önerisi veya inovatif fikir başvurusu nasıl yapılır?","acceptedAnswer":{"@type":"Answer","text":"İletişim formu üzerinden kısa bir özet ile başvurabilirsiniz. Araştırma, eğitim teknolojileri, değerlendirme sistemleri ve inovasyon alanlarında hem kurumsal hem bireysel talepler değerlendirilmektedir. İlk aşamada detaylı bilgi paylaşılması gerekmez."}},
+      {"@type":"Question","name":"Öğrenci projeleri ve akademik iş birliği için nasıl başvurabilirim?","acceptedAnswer":{"@type":"Answer","text":"Tüm bölümlerden öğrenciler https://fikir.sonerberse.com/ adresinden Fikirden Projeye programına başvurabilir. Akademik ve kurumsal iş birliği önerileri için iletişim formunu kullanabilirsiniz."}},
       {"@type":"Question","name":"Uluslararası kariyer ve mesleki gelişim alanlarında da çalışıyor musunuz?","acceptedAnswer":{"@type":"Answer","text":"Akademik çalışmaların yanı sıra, sağlık profesyonellerinin uluslararası kariyer süreçleri, NCLEX hazırlığı ve mesleki gelişim konularında da yönlendirme yapılmaktadır. Bu alanda görüşme talebi iletişim formu üzerinden iletilebilir."}},
       {"@type":"Question","name":"İlk iletişimde ne kadar bilgi paylaşmak gerekir?","acceptedAnswer":{"@type":"Answer","text":"Kısa bir tanıtım ve görüşme konusunun özetle belirtilmesi yeterlidir. Tüm başvurular profesyonel çerçevede değerlendirilmektedir."}}
     ]
@@ -389,7 +389,7 @@
     .hero-title { font-family:'Playfair Display',serif; font-size:clamp(32px,4.5vw,52px); font-weight:500; line-height:1.15; margin-bottom:24px; letter-spacing:-.025em; color:var(--ink) }
     .hero-title em { font-style:italic; color:var(--gold); font-weight:400 }
     .hero-sub { font-size:16px; color:var(--body); line-height:1.8; margin-bottom:36px; max-width:520px }
-    .hero-btns { display:grid; grid-template-columns:repeat(2,max-content); gap:14px; max-width:100% }
+    .hero-btns { display:flex; flex-wrap:wrap; gap:14px; max-width:100% }
 
     /* Profile Card */
     .profile-card { background:var(--surface); border:1px solid var(--border); border-radius:20px; padding:32px; position:relative; overflow:hidden }
@@ -515,7 +515,8 @@
     .scale-success.show { display:block }
     .scale-success i { color:var(--gold); margin-bottom:12px }
     @media(max-width:600px) {
-      .hero-btns { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px }
+      .hero-btns { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px }
+      .hero-btns .student-entry { grid-column:1 / -1 }
       .hero-btns .btn { justify-content:center; text-align:center; white-space:normal; padding:13px 12px }
       .hero-btns .btn svg { flex-shrink:0 } .scale-grid { grid-template-columns:1fr } }
 
@@ -671,6 +672,7 @@
         <li><a href="/yazilar/">Yazılarım</a></li>
         <li><a href="#career">Kariyer</a></li>
         <li><a href="#projects">Projeler</a></li>
+        <li><a href="https://fikir.sonerberse.com/">Öğrenci projeleri</a></li>
         <li><a href="#collaboration">İş Birliği</a></li>
         <li><a href="#scales">Ölçek İzinleri</a></li>
         <li><a href="#contact" class="nav-cta">İletişim</a></li>
@@ -688,6 +690,7 @@
   <a href="/yazilar/" onclick="toggleMobileMenu(false)">Yazılarım</a>
   <a href="#career" onclick="toggleMobileMenu(false)">Kariyer Danışmanlığı</a>
   <a href="#projects" onclick="toggleMobileMenu(false)">Proje ve Geliştirme</a>
+  <a href="https://fikir.sonerberse.com/">Öğrenci projeleri</a>
   <a href="#collaboration" onclick="toggleMobileMenu(false)">İş Birliği</a>
   <a href="#scales" onclick="toggleMobileMenu(false)">Ölçek İzinleri</a>
   <a href="#contact" onclick="toggleMobileMenu(false)">İletişim</a>
@@ -703,9 +706,10 @@
         <div class="hero-tag"><span class="pulse"></span> Akademik Profil</div>
         <h1 class="hero-name">Doç. Dr. Soner Berşe</h1>
         <h2 class="hero-title" style="margin-bottom:24px">Hemşirelik eğitimi ve araştırma</h2>
-        <p class="hero-sub">Gaziantep Üniversitesi’nde hemşirelik eğitimi, OSCE ve yapay zekâ destekli eğitim-değerlendirme üzerine çalışıyorum. Bu sitede yayınlarımı ve araştırma alanlarımı inceleyebilir, yeni yazılarımı takip edebilirsiniz.</p>
+        <p class="hero-sub">Gaziantep Üniversitesi’nde hemşirelik eğitimi, OSCE ve yapay zekâ destekli eğitim-değerlendirme üzerine çalışıyorum. Fikirden Projeye programına tüm bölümlerden öğrenciler, bir sorun gözlemiyle, bir fikirle veya bir ekibe katkı sunmak için katılabilir.</p>
         <div class="hero-btns">
-          <a href="#publications" class="btn btn-d"><i data-lucide="book-open" style="width:16px;height:16px"></i> Yayınlarım</a>
+          <a href="https://fikir.sonerberse.com/" class="btn btn-d student-entry"><i data-lucide="lightbulb" style="width:16px;height:16px"></i> Öğrenci projelerine başvur</a>
+          <a href="#publications" class="btn btn-o"><i data-lucide="book-open" style="width:16px;height:16px"></i> Yayınlarım</a>
           <a href="/yazilar/" class="btn btn-o"><i data-lucide="pen-line" style="width:16px;height:16px"></i> Yazılarım</a>
         </div>
       </div>
@@ -1132,9 +1136,9 @@
           <a href="#contact" class="btn btn-o" style="font-size:12px;padding:10px 20px"><i data-lucide="handshake" style="width:14px;height:14px"></i> İş Birliği Görüşmesi</a>
         </div>
         <div class="collab-card">
-          <h3>İnovatif Fikir Başvurusu</h3>
-          <p>Sağlık eğitimi, dijital sağlık, NCLEX, değerlendirme, eğitim teknolojileri veya yapay zekâ alanlarında inovatif fikirleri olan kişi ve ekipler, kısa bir özetle başvurabilir.</p>
-          <a href="#contact" class="btn btn-o" style="font-size:12px;padding:10px 20px"><i data-lucide="rocket" style="width:14px;height:14px"></i> Fikir Başvurusu</a>
+          <h3>Fikirden Projeye · Birlikte Geliştirelim</h3>
+          <p>Hangi bölümde okursan oku, fark ettiğin bir sorunu veya çözüm fikrini paylaşabilirsin. Bir ekibe katılmak istiyorsan üstlenmek istediğin işi ve becerilerini anlatman yeterli.</p>
+          <a href="https://fikir.sonerberse.com/" class="btn btn-o" style="font-size:12px;padding:10px 20px"><i data-lucide="rocket" style="width:14px;height:14px"></i> Öğrenci başvurusunu aç</a>
         </div>
       </div>
       <div class="collab-note">
@@ -1354,8 +1358,8 @@
         <div class="faq-a"><p>Sağlık eğitimi, hemşirelik, OSCE ve beceri değerlendirme, kültürel adaptasyon, yapay zekâ destekli eğitim-değerlendirme modelleri, NCLEX eğitimi ve eğitim teknolojileri temel araştırma ve geliştirme alanlarımdır.</p></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">İş birliği, proje önerisi veya inovatif fikir başvurusu nasıl yapılır?<i data-lucide="plus" style="width:18px;height:18px"></i></button>
-        <div class="faq-a"><p>İletişim formu üzerinden kısa bir özet ile başvurabilirsiniz. Araştırma, eğitim teknolojileri, değerlendirme sistemleri ve inovasyon alanlarında hem kurumsal hem bireysel talepler değerlendirilmektedir. İlk aşamada detaylı bilgi paylaşılması gerekmez.</p></div>
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Öğrenci projeleri ve akademik iş birliği için nasıl başvurabilirim?<i data-lucide="plus" style="width:18px;height:18px"></i></button>
+        <div class="faq-a"><p>Tüm bölümlerden öğrenciler <a href="https://fikir.sonerberse.com/">Fikirden Projeye programına</a> başvurabilir. Akademik ve kurumsal iş birliği önerileri için <a href="#contact">iletişim formunu</a> kullanabilirsiniz.</p></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Uluslararası kariyer ve mesleki gelişim alanlarında da çalışıyor musunuz?<i data-lucide="plus" style="width:18px;height:18px"></i></button>
@@ -1374,7 +1378,7 @@
   <div class="container">
     <div class="eyebrow reveal">İletişim</div>
     <h2 class="h2 reveal">İletişime <em class="pf" style="color:var(--gold)">Geçin</em></h2>
-    <p class="lead reveal" style="margin-bottom:40px">Akademik iş birliği, proje görüşmesi veya inovatif fikir başvurusu için aşağıdaki formu kullanabilirsiniz.</p>
+    <p class="lead reveal" style="margin-bottom:40px">Akademik iş birliği ve proje görüşmesi için aşağıdaki formu kullanabilirsiniz. Öğrenci olarak fikir sunmak veya bir ekibe katılmak için <a href="https://fikir.sonerberse.com/">Fikirden Projeye başvurusunu</a> açabilirsiniz.</p>
     <div class="contact-grid">
       <div>
         <form id="contactForm" class="reveal" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event)">
@@ -1519,6 +1523,7 @@
         <a href="#publications">Yayınlar</a>
         <a href="/yazilar/">Yazılarım</a>
         <a href="#projects">Proje ve Geliştirme</a>
+        <a href="https://fikir.sonerberse.com/">Öğrenci projeleri</a>
         <a href="#collaboration">İş Birliği</a>
         <a href="#scales">Ölçek İzinleri</a>
         <a href="#contact">İletişim</a>
