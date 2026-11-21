@@ -192,7 +192,7 @@ function shell({ title, description, canonical, content, preview, structuredData
   <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="${themeColor(theme)}">
   <link rel="icon" type="image/png" href="/assets/icon-192.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="manifest" href="/manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=Source+Sans+3:wght@400..800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/blog.css">
   <link rel="stylesheet" href="/assets/theme-light.css">
   <link rel="stylesheet" href="/assets/blog-light.css">
@@ -201,7 +201,7 @@ function shell({ title, description, canonical, content, preview, structuredData
   <a class="blog-skip-link" href="#main-content">İçeriğe geç</a>
   <header class="blog-site-header"><div class="blog-header-inner blog-container">
     <a class="blog-brand" href="/"><span class="blog-brand-monogram" aria-hidden="true">SB</span><span>Doç. Dr. Soner Berşe<small>Akademisyen · Araştırmacı</small></span></a>
-    <nav class="blog-nav" aria-label="Ana menü"><a href="/">Ana Sayfa</a><a href="/yazilar/"${canonical === '/yazilar/' ? ' aria-current="page"' : ' class="active"'}>Yazılarım</a><a class="program-tab" href="https://fikir.sonerberse.com/ogrenci">Fikirden Projeye</a><a href="/#contact">İletişim</a><a href="/#english" lang="en" aria-label="English academic profile">EN</a></nav>
+    <nav class="blog-nav" aria-label="Ana menü"><a href="/">Ana Sayfa</a><a href="/yazilar/"${canonical === '/yazilar/' ? ' aria-current="page"' : ' class="active"'}>Yazılarım</a><a class="program-tab" href="https://fikir.sonerberse.com/ogrenci">Fikirden Projeye</a><a href="/#contact">İletişim</a><a href="/en/" hreflang="en" lang="en" aria-label="English academic profile">EN</a></nav>
   </div></header>
   <main class="blog-main blog-container" id="main-content">${content}</main>
   <footer class="blog-site-footer"><div class="blog-container"><p>Doç. Dr. Soner Berşe</p><a href="/">Ana sayfaya dön <span aria-hidden="true">↗</span></a></div></footer>
@@ -349,11 +349,14 @@ export async function buildSite({ rootDir = ROOT_DIR, preview = false, now = new
     home = home.replace(/<meta\s+name=["']robots["'][^>]*>/gi, '');
     home = home.replace('</head>', '<meta name="robots" content="noindex, nofollow">\n</head>');
   }
+  const english = await fs.readFile(path.join(rootDir, 'en', 'index.html'), 'utf8')
+    .catch(error => error.code === 'ENOENT' ? null : Promise.reject(error));
   let sitemap = await fs.readFile(path.join(rootDir, 'sitemap.xml'), 'utf8');
   if (!sitemap.includes('</urlset>')) fail('sitemap.xml: geçerli urlset gerekli.');
   // Preserve non-blog entries; rebuild this section so retired posts disappear.
   sitemap = sitemap.replace(/\s*<url\b[^>]*>[\s\S]*?<\/url>/g, entry => /<loc>\s*https:\/\/sonerberse\.com\/(?:yazilar|_taslaklar)(?:\/|<)/.test(entry) ? '' : entry);
   const entries = [`  <url><loc>${SITE_URL}/yazilar/</loc></url>`, ...published.map(post => `  <url><loc>${SITE_URL}${postUrl(post)}</loc><lastmod>${escapeHtml(post.publishedAt)}</lastmod></url>`)];
+  if (english) entries.unshift(`  <url><loc>${SITE_URL}/en/</loc></url>`);
   sitemap = sitemap.replace('</urlset>', `${entries.join('\n')}\n</urlset>`);
 
   await resetGeneratedDirectory(outputDir);
@@ -364,6 +367,10 @@ export async function buildSite({ rootDir = ROOT_DIR, preview = false, now = new
   const assetDir = path.join(rootDir, 'assets');
   try { await copyTree(assetDir, path.join(outputDir, 'assets')); }
   catch (error) { if (error.code !== 'ENOENT') throw error; }
+  if (english) {
+    const profile = preview ? english.replace('</head>', '<meta name="robots" content="noindex, nofollow">\n</head>') : english;
+    await writePage(outputDir, 'en', profile);
+  }
   await fs.writeFile(path.join(outputDir, 'index.html'), home);
   await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemap);
   if (theme === 'light') {
