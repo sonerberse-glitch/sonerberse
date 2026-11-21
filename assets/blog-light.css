@@ -1,12 +1,12 @@
 /* Optional editorial presentation. Removing data-theme="light" restores blog.css. */
 html[data-theme="light"] {
-  --blog-bg: var(--bg, #faf9f4);
+  --blog-bg: var(--bg, #f8f6f1);
   --blog-surface: var(--surface, #fffefa);
-  --blog-ink: var(--ink, #132d39);
-  --blog-body: var(--body, #384d53);
-  --blog-muted: var(--muted, #52666a);
-  --blog-gold: var(--gold, #075852);
-  --blog-border: var(--border, #ccd7d1);
+  --blog-ink: var(--ink, #192f4a);
+  --blog-body: var(--body, #394c60);
+  --blog-muted: var(--muted, #516174);
+  --blog-gold: var(--gold, #264766);
+  --blog-border: var(--border, #ccd5dd);
 }
 
 html[data-theme="light"] body.blog-page {
@@ -24,7 +24,7 @@ html[data-theme="light"] .blog-home {
   border-bottom: 0;
 }
 html[data-theme="light"] :is(.blog-home, .blog-page) ::selection {
-  background: #ccdfd7;
+  background: #cfdfeb;
   color: var(--blog-ink);
 }
 html[data-theme="light"] :is(.blog-home, .blog-page) a:focus-visible {
@@ -209,7 +209,7 @@ html[data-theme="light"] .blog-header-inner { min-height: 68px; }
 html[data-theme="light"] :is(.blog-brand > span:first-child, .blog-brand-mark) {
   color: #fffefa; background: var(--blog-gold); border: 0; font: 500 22px/1 var(--display, Georgia, serif);
 }
-html[data-theme="light"] .blog-home { background: #edf3ef; }
+html[data-theme="light"] .blog-home { background: var(--bg2); }
 html[data-theme="light"] .blog-container { max-width: 1260px; padding-inline: clamp(20px, 4.5vw, 68px); }
 html[data-theme="light"] .blog-page-heading { padding-bottom: 26px; border-bottom: 1px solid var(--blog-border); }
 html[data-theme="light"] .blog-page-heading h1 { font-size: clamp(43px, 5.5vw, 76px); }
@@ -230,4 +230,11 @@ html[data-theme="light"] .blog-prose :is(.blog-references,.blog-related) a { ove
 @media (max-width: 600px) {
   html[data-theme="light"] .blog-header-inner { padding-block: 14px 8px; }
   html[data-theme="light"] .blog-page-heading { margin-bottom: 26px; }
+}
+
+html[data-theme="light"] .blog-nav a.program-tab {
+  color: #fff; padding: 8px 13px; text-decoration: none; font-weight: 650;
+}
+@media (max-width: 600px) {
+  .blog-nav { gap: 4px 16px; }
 }
