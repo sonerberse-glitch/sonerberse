@@ -265,7 +265,14 @@ html[data-theme="light"] .profile-link {
   padding: 7px 10px; text-align: left; color: var(--ink); font-size: 13px; font-weight: 550;
   border: 1px solid var(--border-l); border-radius: 3px; background: transparent;
 }
-html[data-theme="light"] .profile-link span { color: var(--gold); }
+html[data-theme="light"] .profile-link span {
+  position: relative; width: 8px; height: 8px; flex: 0 0 8px; margin-inline-end: 2px;
+  border-top: 1.5px solid; border-right: 1.5px solid; color: var(--gold); font-size: 0;
+}
+html[data-theme="light"] .profile-link span::before {
+  content: ''; position: absolute; top: -1px; right: -1px; width: 10px;
+  border-top: 1.5px solid; transform-origin: right center; transform: rotate(-45deg);
+}
 html[data-theme="light"] .profile-link:hover { border-color: var(--gold); background: var(--gold-s); transform: none; }
 html[data-theme="light"] :is(a, button, select, input, textarea):focus-visible { outline: 3px solid var(--copper); outline-offset: 3px; }
 html[data-theme="light"] :is(.student-entry, .form-submit, .scale-action-btn):active { background: #4c2133; transform: translateY(1px); }
